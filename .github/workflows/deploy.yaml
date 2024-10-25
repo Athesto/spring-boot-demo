@@ -19,7 +19,8 @@ jobs:
         java-version: '17'
 
     - name: Build with Maven
-      run: mvn clean package
+      working-directory: ./web/demo-app
+      run: mvn -X clean package
 
     #- name: Log in to Amazon ECR
     #  run: |
