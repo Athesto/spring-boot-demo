@@ -1,0 +1,13 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:8080"
+    environment:
+      - BASTION_SSH_PORT=2222
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./web:/app
+    working_dir: /app/demo-app
+    entrypoint: ["./mvnw", "spring-boot:run"]
