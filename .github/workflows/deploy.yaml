@@ -26,9 +26,9 @@ jobs:
     #  run: |
     #    aws ecr get-login-password --region tu-region | docker login --username AWS --password-stdin <tu-registro>
 
-    #- name: Build, tag, and push Docker image
-    #  run: |
-    #    docker build -t my-springboot-app .
-    #    docker tag my-springboot-app:latest <tu-registro>/<tu-repositorio>:latest
-    #    docker push <tu-registro>/<tu-repositorio>:latest
+    - name: Build, tag, and push Docker image
+      run: |
+        docker build -t my-springboot-app .
+        docker tag my-springboot-app:latest athesto/my-springboot-app:latest
+        docker push athesto/my-springboot-app:latest
 
