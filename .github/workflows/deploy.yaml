@@ -28,8 +28,10 @@ jobs:
 
     - name: Build, tag, and push Docker image
       run: |
+        pwd
+        ls -l
         cd web/demo-app
-        docker build -t my-springboot-app .
+        docker build -t my-springboot-app -f Dockerfile.prod .
         docker tag my-springboot-app:latest athesto/my-springboot-app:latest
         docker push athesto/my-springboot-app:latest
 
