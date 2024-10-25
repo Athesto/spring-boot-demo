@@ -27,7 +27,7 @@ jobs:
     #    aws ecr get-login-password --region tu-region | docker login --username AWS --password-stdin <tu-registro>
 
     - name: Build, tag, and push Docker image
-      working-directory: ..
+      working-directory: ./web
       run: |
         pwd
         ls -l
