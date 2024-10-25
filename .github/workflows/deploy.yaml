@@ -20,7 +20,7 @@ jobs:
 
     - name: Build with Maven
       working-directory: ./web/demo-app
-      run: mvn -X clean package
+      run: mvn clean package
 
     #- name: Log in to Amazon ECR
     #  run: |
